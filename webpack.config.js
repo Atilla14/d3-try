@@ -7,6 +7,10 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/public/"
   },
+  devServer: {
+    host: '0.0.0.0',
+    disableHostCheck: true
+  },
   module: {
     loaders: [
       // {

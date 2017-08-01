@@ -39,14 +39,14 @@ d3.csv("data.csv", function(d) {
       .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
       .attr("dy", "0.35em")
       .text(function(d) { return d.data.age; });
+  SVG.render(DOMToString(finalSVG))
 });
 
 var finalSVG = document.getElementById('chart')
 
-function DOMToString = function (elem) {
+function DOMToString(elem) {
   var tmpEl = document.createElement('div');
   tmpEl.appendChild(elem);
   return tmpEl.innerHTML;
 }
 
-SVG.render(DOMToString(finalSVG))
