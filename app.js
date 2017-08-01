@@ -43,4 +43,10 @@ d3.csv("data.csv", function(d) {
 
 var finalSVG = document.getElementById('chart')
 
-export default finalSVG
+function DOMToString = function (elem) {
+  var tmpEl = document.createElement('div');
+  tmpEl.appendChild(elem);
+  return tmpEl.innerHTML;
+}
+
+SVG.render(DOMToString(finalSVG))
